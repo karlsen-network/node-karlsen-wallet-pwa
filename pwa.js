@@ -138,7 +138,7 @@ class KarlsenPWA extends EventEmitter {
 			const {folders={}} = config;
 			const {
 				karlsenUX='/node_modules/@karlsen/ux',
-				flowUX='/node_modules/@karlsen/flow-ux',
+				flowUX='/node_modules/@aspectron/flow-ux',
 				walletWorker='/node_modules/@karlsen/wallet-worker',
 				secp256k1='/node_modules/secp256k1-wasm/http',
 				grpcWeb='/node_modules/@karlsen/grpc-web',
@@ -255,7 +255,7 @@ class KarlsenPWA extends EventEmitter {
 
 			let router = new FlowRouter(app, {
 				mount:{
-					// flowUX:'/node_modules/@karlsen/flow-ux',
+					// flowUX:'/node_modules/@aspectron/flow-ux',
 					flowUX:"/flow/flow-ux",
 					litHtml:'/lit-html',
 					litElement:'/lit-element',
@@ -266,7 +266,7 @@ class KarlsenPWA extends EventEmitter {
 				folders:[
 					{url:'/http', folder:path.join(rootFolder, "http")},
 					{url:'/karlsen-ux', folder:karlsenUX},
-					{url:'/node_modules/@karlsen/flow-ux', folder:flowUX},
+					{url:'/node_modules/@aspectron/flow-ux', folder:flowUX},
 					{url:'/karlsen-wallet-worker', folder:walletWorker},
 					{url:'/resources/extern', folder:flowUX+'/resources/extern'},
 					{url:'/@karlsen/grpc-web', folder:grpcWeb},
